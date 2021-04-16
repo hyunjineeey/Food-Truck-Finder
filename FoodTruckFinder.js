@@ -44,6 +44,7 @@ function showFoodTrucks(offset) {
 
             // For next page
             offset += limit;
+            console.log("\nPress any key to continue...");
             nextData(count, offset);
         });
     });
@@ -58,8 +59,6 @@ function showFoodTrucks(offset) {
 // Display next iteration
 function nextData(count, offset) {
     if (count == limit) {
-        console.log("\nPress any key to continue...");
-  
         // Display only ten food trucks
         stdin.addListener('data', function(d) {
             stdin.removeAllListeners('data');
